@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root{
+    --primarycolor:#f09d51;
+    --mainwhite:#fff;
+    --mainblack:#222;
+    --maingrey:#ececec;
+    --mainspacing:0.1rem;
+    --maintransition:all 0.3s linear;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--mainblack);
+    background: var(--mainwhite);
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+/*------------------ navbar starts------------------ */
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background:#D8C49F;
+     z-index: 1; /*used with sticky */
+}
+.navbarcenter{
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    align-items: center;
+}
+.nav-icon{
+    font-size: 1.5rem;
+}
+.cartbtn{
+    position: relative;
+    cursor: pointer;
+}
+.cart-items{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primarycolor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainwhite);
+}
+/* -----------------navbar ends---------------------- */
+/*------------------hero section---------------------- */
+ .hero{
+    min-height: calc(100vh - 60px);
+    background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner{
+    text-align: center;
+    background: rgba(255,255 ,255 ,0.8 );
+    display: inline-block;
+    padding: 2rem;
+}
+.bannertitle{
+    font-size: 3.4rem;
+    letter-spacing: var(--mainspacing);
+    margin-bottom: 3rem;
+}
+.bannerbtn{
+    padding: 1rem 3rem;
+    letter-spacing: var(--mainspacing);
+    font-size: 1rem;
+    background-color: var(--primarycolor);
+    color: var(--mainblack);
+    border: 1px solod var(--primarycolor);
+    transition: var(--maintransition);
+}
+.bannerbtn:hover{
+    background-color: transparent;
+    color: var(--primarycolor);
+}
+/* -----------------hero section ends----------------- */
+/*------------------ product section starts -----------*/
+.products{
+    padding: 4rem 0 0 0 ;
+}
+.sectiontitle h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: var(--mainspacing);
+}
+.products-center{
+    width: 90vw;
+    margin: 0 auto;
+    /* max-width: 1170px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,2fr));
+    /* grid-template-rows: repeat(2,1fr); */
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+}
+.imgcontainer{
+    position: relative;
+    overflow: hidden;
+}
+.bagbtn{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background:var(--primarycolor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainspacing);
+    font-weight: bold;
+    transition: var(--maintransition);
+    transform: translateX(101%);
+    cursor: pointer;
+}
+.bagbtn:hover{
+    color: var(--mainwhite);
+}
+.fa-shopping-cart{
+    margin-right: 0.5rem;
+}
+.imgcontainer:hover .bagbtn{
+    transform: translateX(0);
+}
+.product-img{
+    display: block;
+    width: 100%;
+    min-width: 12rem;
+    min-height: 12rem;
+    transition: var(--maintransition);
+}
+.imgcontainer:hover .product-img{
+    opacity: 0.5;
+}
+.product h3{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainspacing);
+    text-align: center;
+}
+.product h4{
+    margin-top: 0.7rem;
+    letter-spacing: var(--mainspacing);
+    text-align: center;
+    color:var(--primarycolor);
+    margin-bottom: 0.5rem;
+}
+/*------------------- product section ends--------------*/
+/*------------------- footer section starts ---------------*/
+.footer{
+    width: 100%;
+    /* max-width: 1400px; */
+    height: calc(100% - 60px);
+    margin: 0 auto;
+    display: flex;
+    /* align-items: center; */
+    padding: 1rem 0;
+    justify-content: space-around;
+    /* border-top: 1px solid black; */
+    background: #D8C49F;
+    text-align: left;
+    /* font-size: 1.2rem; */
+    margin-top: 2rem;
+    /* color: white; */
+}
+.footer ul{
+    list-style: none;
+}
+.heading{
+    font-weight: bold;
+    color: #222;
+    font-size: 1.2rem;
+}
+.trademark{
+    border-top: 1px solid black;
+    padding: 4px 0;
+    background:#a28c62ad;
+}
+/*------------------- footer section ends----------------- */
